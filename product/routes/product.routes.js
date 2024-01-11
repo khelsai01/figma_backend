@@ -34,7 +34,6 @@ productRouter.post("/add",upload.single("image"), async(req,res)=>{
     const {name,description,price,category} = req.body
     const {filename} = req.file;
 
-
     try {
         const newProduct = new ProductModel({
             name,
